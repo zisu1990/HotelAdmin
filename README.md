@@ -1,4 +1,4 @@
-# vue-tag
+# hotel-admin
 
 ## Project setup
 ```
