@@ -1,7 +1,6 @@
 <template>
   <div class="sidebar">
     <el-menu
-      :collapse="isCollapse"
       :default-active="$route.path"
       class="el-menu-vertical-demo menu"
       active-text-color="#10B9D3"

@@ -1,14 +1,14 @@
 <template>
   <div class="header">
     <div></div>
-    <el-dropdown   class="_dropdown">
+    <el-dropdown @command="handleCloseBtn" class="_dropdown">
       <span class="el-dropdown-link">
         admin
         <i class="el-icon-arrow-down el-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item >修改密码</el-dropdown-item>
-        <el-dropdown-item @click="logout">退出</el-dropdown-item>
+        <el-dropdown-item command="changeWord">修改密码</el-dropdown-item>
+        <el-dropdown-item command="logout">退出</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </div>
@@ -22,6 +22,14 @@ export default {
     logout() {
       window.sessionStorage.clear(); //清除token
       this.$router.push("/login");
+    },
+    handleCloseBtn(command) {
+      if (command == "changeWord") {
+        console.log("command");
+      } else if (command == "logout") {
+        window.sessionStorage.clear(); //清除token
+        this.$router.push("/login");
+      }
     }
   }
 };
@@ -58,7 +66,7 @@ export default {
   // }
   .el-dropdown-link {
     cursor: pointer;
-    color: #FFF;
+    color: #fff;
   }
   .el-icon-arrow-down {
     font-size: 12px;

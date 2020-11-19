@@ -24,7 +24,7 @@ import vFooter from "@/views/common/footer";
 export default {
   data() {
     return {
-      isCollapse: false
+      
     };
   },
   components: { vHeader, vAside, vTag, vFooter }
