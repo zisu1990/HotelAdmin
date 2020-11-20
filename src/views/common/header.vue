@@ -1,6 +1,8 @@
 <template>
   <div class="header">
-    <div></div>
+    <div>
+        <span>轻游酒店业务管理系统</span>
+    </div>
     <el-dropdown @command="handleCloseBtn" class="_dropdown">
       <span class="el-dropdown-link">
         admin
@@ -16,13 +18,11 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      
+    };
   },
   methods: {
-    logout() {
-      window.sessionStorage.clear(); //清除token
-      this.$router.push("/login");
-    },
     handleCloseBtn(command) {
       if (command == "changeWord") {
         console.log("command");

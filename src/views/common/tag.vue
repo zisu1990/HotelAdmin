@@ -16,7 +16,7 @@
  
     <el-dropdown @command="handleCloseBtn" class="_dropdown">
       <el-button type="primary" size="small">
-        标签选项
+        操作
         <i class="el-icon-arrow-down el-icon--right"></i>
       </el-button>
       <el-dropdown-menu slot="dropdown">

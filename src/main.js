@@ -12,7 +12,7 @@ Vue.use(ElementUI)
 // import TreeTable from 'vue-table-with-tree-grid'
 // Vue.component('tree-table', TreeTable)
 
-//导入NProgress包对应的js和css
+//导入NProgress包对应的js和css  -------网页上方加载的进度条
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 

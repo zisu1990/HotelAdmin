@@ -3,7 +3,11 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'; //导入登录组件
 
+
+import RoomSerive from '../views/Room/RoomSerive.vue'
+
 import Booking from '../views/Booking/Booking.vue';
+import RoomBooking from '../views/Room/RoomBooking.vue';
 
 import Guest from '../views/Guest/Guest.vue';
 
@@ -49,28 +53,19 @@ const routes = [{
       //   }
       // },
       {
-        path: '/room',
+        path: '/room',//客房业务
         name: 'room',
-        component: () => import('@/views/Room/RoomSerive.vue'),
+        component: RoomSerive,
         meta: {
           title: '客房业务',
           hideclose: true, //不可以关闭
         }
       },
       {
-        path: '/test/test1',
-        name: 'test1',
-        component: () => import('@/views/test/test1.vue'),
+        path: '/RoomBooking', //客房预订
+        component: RoomBooking,
         meta: {
-          title: 'test1'
-        }
-      },
-      {
-        path: '/test/test2',
-        name: 'test2',
-        component: () => import('@/views/test/test2.vue'),
-        meta: {
-          title: 'test2'
+          title: '客房预订'
         }
       },
       {

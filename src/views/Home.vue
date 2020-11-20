@@ -1,8 +1,9 @@
 <template>
   <div class="homeContainer">
-    <vAside></vAside>
+    <vHeader></vHeader>
+    
     <div class="headContainer">
-      <vHeader></vHeader>
+      <vAside></vAside>
       <div class="tagContainer">
         <vTag></vTag>
         <div class="mainContainer">
@@ -36,14 +37,13 @@ export default {
   box-sizing: border-box;
 
   height: 100vh;
-  display: flex;
-  flex-flow: row nowrap;
+
   .headContainer {
     // border: 1px solid red;
     box-sizing: border-box;
 
-    display: flex;
-    flex-flow: column nowrap;
+     display: flex;
+  flex-flow: row nowrap;
     flex: auto;
     .tagContainer {
       //  border: 1px solid blue;
